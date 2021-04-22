@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Uma aplicação web simples de pomodoro">
+    <meta name="keywords" content="Pomodoro, HTML, CSS, JavaScript">
+    <meta name="author" content="Bernardo Schmitz dos Santos">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+    <title class="title">Web Pomodoro</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="https://gitlab.com/BernardoS/web-pomodoro" target="_blank">GitLab</a></li>
+            <li><a class=about>Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <span>Intervalos</span>
+        <div class="row">
+            <div>
+                <img id="minus" src="assets/img/32px/minus.png" alt="Remover turno" title="Remover um turno">
+            </div>
+            <div class="turns"></div>
+            <div>
+                <img id="plus" src="assets/img/32px/plus.png" alt="Adicionar turno" title="Adicionar um turno">
+            </div>
+
+        </div>
+
+        <div class="time-container">
+
+            <svg class="circle-svg">
+                <circle class="background-circle"></circle>
+                <circle class="circle"></circle>
+            </svg>
+
+            <div class="time">Tempo</div>
+        </div>
+
+        <div class="time-mode">Hora de trabalhar!</div>
+
+        <div class="row">
+            <button class="btn-pomodoro">Pomodoro</button>
+            <button class="btn-longo">Long Break</button>
+            <button class="btn-curto">Short Break</button>
+        </div>
+
+        <div class="row">
+            <button class=timer-control>Iniciar </button>
+            <button class=reset-button><img src="assets/img/16px/hourglass.png"> Reiniciar</button>
+        </div>
+
+
+    </div>
+
+    <div class="aboutModal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Sobre</h2>
+            </div>
+            <div class="modal-body">
+                <br />
+                <h3>O que é o Pomodoro?</h3><br />
+                <p>Pomodoro é um método de gerenciamento de tempo desenvolvido por Francesco Cirillo no final
+                    dos anos 1980.</p>
+                <p>A técnica consiste na utilização de um cronômetro para dividir o trabalho em períodos
+                    de 25 minutos, separados por breves intervalos. </p>
+                <p>Seu nome deriva da palavra italiana pomodoro (tomate), como referência ao popular
+                    cronômetro gastronômico na forma dessa fruta.</p>
+                <p>O método é baseado na ideia de que pausas frequentes
+                    podem aumentar a agilidade mental. <a href="https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro"
+                        target="_blank"><b>Wikipedia</b></a></p>
+                <br />
+                <h3>Como utilizar este Pomodoro?</h3><br />
+
+                <ol class="list-ol">
+                    <li>Defina a quantidade de intervalos de tempo, por exemplo dois intervalos de 25 minutos.
+                        Totalizando 50 minutos de atividade.</li>
+                    <br /><br />
+                    <li>Para cada pomodoro completado, você tem direito a 5 minutos de descanso.</li><br /><br />
+                    <li>Você pode fazer 25 minutos e descansar 5 ou 50 minutos e depois descansar 10 por exemplo.</li><br /><br />
+                    <li>Tenha uma boa produtividade!</li><br /><br />
+
+                </ol>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer"><a href="https://www.linkedin.com/in/bernardo-ssantos/" target="_blank">Made with <svg
+                class="heart" viewBox="0 0 32 29.6">
+                <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+            </svg> by Bernardo Schmitz
+        </a>
+    </footer>
+
+    <audio id="click">
+        <source src="assets/audio/Click.m4a">
+
+        <audio id="notification">
+            <source src="assets/audio/notification.mp3">
+
+
+            <script src="scripts.js"></script>
+
+</body>
+
+</html>
